@@ -1,0 +1,13 @@
+.DS_Store
+*.pyc
+*.bak
+*.swp
+*.*~
+./#*
+MANIFEST
+build
+dist
+PLANS.md
+*.egg-info
+venv
+docs/_build
