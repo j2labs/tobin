@@ -6,14 +6,13 @@ Tobin
 
 .. rubric:: Schematics, Data, and Databases.
 
-Tobin is a database layer for Schematics.
+Tobin is a data persistence layer for Schematics.  We store data in denormalized
+form and perform joins in software.  Good habits early make smoother sailing
+later.
 
-The goal of the project is to build a simple data layer has similar design
-goals of large systems.  Data is stored in denormalized form and accessed with
-a key-value interface.
-
-Tobin takes advantage of features in Schematics for customizing how id's are
-generated from data for persistence.
+This project is named after Amon Tobin, a musician I am regularly inspired by.
+If you're not familiar with his work, `try Hey Mr. Tree first
+<http://www.youtube.com/watch?v=1JCZCYB0df0>`_.
 
 
 Quick Example
@@ -32,6 +31,7 @@ First, let's create a song model.
       name = StringType()
       artist = StringType()
       url = URLType()
+      @serializable
       def id(self):
           return '%s/%s' % (self.artist, self.name)
 
@@ -77,10 +77,3 @@ We could instantiate these as models too:
   >>> songs
   [<Song: Song object>, <Song: Song object>]
 
-
-Amon Tobin
-===========
-
-It is named after Amon Tobin, a musician I am regularly inspired by. If you're
-not familiar with his work, `stop here first
-<http://www.youtube.com/watch?v=1JCZCYB0df0>`_.
