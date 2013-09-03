@@ -35,7 +35,7 @@ First, let's create a song model.
       def id(self):
           return '%s/%s' % (self.artist, self.name)
 
-Create a song instance.
+Create a couple song instances.
 
 .. code:: Python
 
@@ -49,9 +49,9 @@ Create a song instance.
   >>> s2.name = 'Headfirst Dive'
   >>> s2.url = 'https://soundcloud.com/shipyards/headfirst-dive'
 
-Tobin aims for key-value'ish behavior, so we are using a function to generate
-the key from field values.  In this case, we merge the artist name and song name
-for a composite key.
+Tobin aims for key-value'ish behavior, but we haven't set an id on the model.
+Instead, we will use a function to generate the key from field values.  In this
+case, we join the artist name and song name for a composite key.
 
 Instantiate the query set and then save.
  
