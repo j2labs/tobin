@@ -6,7 +6,7 @@ Tobin
 
 .. rubric:: Schematics, Data, and Databases.
 
-Tobin is a data persistence layer for Schematics.  We store data in denormalized
+Tobin is a data persistence layer for `Schematics <http://github.com/j2labs/schematics>`_.  We store data in denormalized
 form and perform joins in software.  Good habits early make smoother sailing
 later.
 
